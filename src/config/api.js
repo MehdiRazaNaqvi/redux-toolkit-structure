@@ -10,5 +10,10 @@
 
 
 
-export const api_url = "http://localhost:5000"
-export const img_url = "http://localhost:5000/images"
+// export const api_url = "http://localhost:5000"
+// export const img_url = "http://localhost:5000/images"
+
+
+
+export const api_url = "https://web-production-b630.up.railway.app"
+export const img_url = "https://web-production-b630.up.railway.app/images"
