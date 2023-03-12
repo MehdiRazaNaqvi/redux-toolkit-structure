@@ -1,0 +1,220 @@
+.news_page_base {
+    width: 100%;
+    height: max-content;
+    /* background-color: pink; */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+
+}
+
+
+
+
+.news_page_articles {
+    width: 75%;
+    height: 100%;
+
+
+    margin-top: 5rem;
+
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    place-items: center;
+
+    gap: 2rem;
+    row-gap: 4rem;
+
+}
+
+
+
+
+
+
+.max_lines2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    /* Set the maximum number of characters to 20 */
+    /* max-width: 40ch; */
+    /* Truncate the text and show an ellipsis for the overflow */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* Wrap the text at word boundaries */
+    white-space: break-word;
+}
+
+
+
+
+
+
+
+
+
+.author_img_feed_page {
+    width: 2rem;
+    height: 2rem;
+
+    border-radius: 50%;
+}
+
+
+.feed_page_author_bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+
+
+
+
+
+#first_article {
+
+    grid-column: 1/3;
+
+}
+
+
+#articles_half {
+
+    min-width: 100%;
+    /* grid-column: 1/2; */
+}
+
+
+.no_articles {
+
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: gray;
+    font-size: 1.3rem;
+
+    grid-column: 1/3;
+
+    margin-top: 30%;
+
+}
+
+
+
+.article_text,
+.article_heading {
+
+    word-wrap: break-word;
+
+}
+
+
+
+
+.news_card_heading {
+
+    height: min-content;
+    min-height: 3rem;
+    font-size: 1.3rem;
+
+
+}
+
+
+
+
+
+
+
+
+
+.max_lines1 {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    /* Set the maximum number of characters to 20 */
+    /* max-width: 40ch; */
+    /* max-height: 1ch; */
+
+    /* Truncate the text and show an ellipsis for the overflow */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* Wrap the text at word boundaries */
+    white-space: break-word;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.item_pic {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    position: absolute;
+    top: -2rem;
+
+
+
+}
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 1000px) {
+    .news_page_articles {
+        width: 90%;
+
+
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
+
+
+
+@media only screen and (max-width: 1000px) {
+    #first_article {
+
+        width: 100% !important;
+    }
+}
+
+
+
+
+
+
+
+@media only screen and (max-width: 500px) {
+
+
+
+    .user_name_and_status {
+        font-size: small;
+    }
+
+}

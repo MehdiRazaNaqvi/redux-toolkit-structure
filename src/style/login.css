@@ -1,0 +1,98 @@
+.login_base {
+    width: 100%;
+    height: 100vh;
+    /* background-color: pink; */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+
+
+.login_base_form {
+
+    width: 50%;
+    /* background-color: aqua; */
+    height: 100%;
+
+
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+    gap: 1rem;
+
+}
+
+.user_login_image_upload {
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+
+    align-self: center;
+
+    
+}
+
+
+.modal_base_header {
+    position: relative;
+
+    color: green;
+
+}
+
+.otp_modal_close_btn {
+    position: absolute;
+    top: 0rem;
+    right: 0rem
+}
+
+
+.otp_panel_email {
+
+    height: 4rem;
+
+
+    
+}
+
+.modal_base_body{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+.otp_panel_email input {
+
+    /* background-color: red; */
+    min-width: 4rem;
+    height: 8vh;
+
+
+    border: 0.5px solid lightgray;
+    border-radius: 1rem;
+
+    margin-right: 0.5rem;
+
+}
+
+
+
+
+
+.phone_verify_label{
+    width:100%;
+    /* background-color: red; */
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

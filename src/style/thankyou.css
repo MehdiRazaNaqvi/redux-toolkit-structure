@@ -1,0 +1,37 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
+.thankyou_base {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(23, 107, 58, 1);
+
+    background-image: url('../images/thank.png');
+
+    background-size: cover;
+
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+
+
+
+
+
+.thankyou_text{
+
+
+    width: 30rem;
+    display: flex;
+    align-items: center;
+    justify-content: center !important;
+
+    color: white;
+
+
+}

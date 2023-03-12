@@ -1,0 +1,12 @@
+
+.cart_len_nav{
+    font-size: 2rem;
+    color: rgb(255, 207, 117);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+
+
+    margin-right: 1rem;
+}

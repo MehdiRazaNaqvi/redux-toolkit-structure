@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Golos+Text:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+.article_display_base {
+    width: 70%;
+
+    height: min-content;
+
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 3rem;
+}
+
+
+.article_heading {
+    color: rgb(27, 27, 27);
+
+    font-family: 'Golos Text', sans-serif;
+
+
+}
+
+
+.article_text {
+    color: rgb(65, 65, 65);
+    font-size: large;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    line-height: 2;
+
+
+}
+
+
+
+
+.author_info_bar_article_page {
+    width: 100%;
+    height: 3rem;
+
+    display: flex;
+    align-content: center;
+
+
+}
+
+
+
+
+
+.article_page_user_info {
+    width: 100%;
+
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+}
+
+
+
+.article_image_display {
+
+    width: 100%;
+    height: min-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+
+
+.article_img {
+    width: 100%;
+    height: 30rem;
+}
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 1000px) {
+    .article_display_base {
+        width: 90%;
+
+    }
+
+    .article_img {
+        width: 100%;
+        height: 25rem;
+    }
+
+
+
+
+}
+
+
+
+
+
+
+@media only screen and (max-width: 800px) {
+    .article_display_base {
+        width: 95%;
+
+    }
+
+    .article_img {
+        width: 100%;
+        height: 20rem;
+    }
+
+}
+
+
+
+
+
+@media only screen and (max-width: 500px) {
+    .article_display_base {
+        width: 95%;
+
+    }
+
+    .article_img {
+        width: 100%;
+        height: 15rem;
+    }
+
+
+
+}

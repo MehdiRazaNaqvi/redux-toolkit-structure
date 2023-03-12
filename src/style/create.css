@@ -1,0 +1,25 @@
+.create_article_base{
+    width: 70%;
+    height: 10rem;
+
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+
+
+}
+
+
+.wrapperClassName{
+
+    /* height: 5rem; */
+    /* background-color: red; */
+}
+
+.d{
+    display: none;
+    height: 2rem;
+}
