@@ -83,7 +83,7 @@ const Login = () => {
 
 
 
-            <Form className="login_base_form" onSubmit={(e) => { e.preventDefault(); login() }}>
+            <Form className="login_base_form" onSubmit={(e) => { e.preventDefault() }}>
 
 
 

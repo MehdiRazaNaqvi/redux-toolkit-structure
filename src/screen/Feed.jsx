@@ -10,11 +10,13 @@ import axios from "axios"
 import { api_url, img_url } from "../config/api"
 import { useDispatch, useSelector } from "react-redux"
 import { toast } from "react-toastify"
-import { setItems, add_to_cart } from "../store/counterslice"
+import { setItems, add_to_cart, } from "../store/counterslice"
 import { AiOutlineUser } from "react-icons/ai"
 // import ReactMarkdown from 'https://esm.sh/react-markdown@7'
 import ReactMarkdown from 'react-markdown'
 import { TfiShoppingCart } from "react-icons/tfi"
+import { getUsersList } from "../store/actions/counterAction"
+import { getTodoList } from "../store/actions/postAction"
 
 
 
@@ -25,56 +27,14 @@ const App = () => {
     const dispatch = useDispatch()
 
     const state = useSelector(state => state.counter)
+    const allState = useSelector(state => state)
+
+    console.log(allState)
 
     const [loading, setLoading] = useState(false)
 
 
 
-    useEffect(() => {
-        setLoading(true)
-        axios.get(`${api_url}/items`)
-            .then(res => {
-
-                setLoading(false);
-                console.log(res)
-                if (res.data?.data) { dispatch(setItems({ data: res.data?.data, cb: () => { } })) }
-                else { toast.error("Something went wrong") }
-
-            })
-            .catch(err => { toast.error("Something went wrong"); setLoading(false) })
-
-
-        // axios.get(`${api_url}/users?populate=image`)
-        //     .then(res => { dispatch(setAuthors({ data: res.data, cb: () => { } })); setLoading(false); })
-        //     .catch(err => { toast.error("Something went wrong"); setLoading(false); })
-
-    }, [])
-
-
-    // console.log(state)
-
-    const calculate_days = (date) => {
-        const pastDate = new Date(date);
-        const currentDate = new Date();
-
-        const timeDifference = currentDate.getTime() - pastDate.getTime();
-
-
-        // const seconds = Math.floor(timeDifference / 1000);
-        // const minutes = Math.floor(seconds / 60);
-        // const hours = Math.floor(minutes / 60);
-        // const days = Math.floor(timeDifference / 24*60*60*1000);
-        const days = Math.floor(timeDifference / (24 * 60 * 60 * 1000));
-
-        if (days >= 0 && days < 1) { return ("Today") }
-
-        else if (days == 1) {
-            return (`Yesterday`)
-        }
-        else {
-            return (`${days} days ago`)
-        }
-    }
 
     return (
 
@@ -278,10 +238,13 @@ const App = () => {
                                             <h6 className="user_name_and_status max_lines1" style={{ margin: "0px", marginLeft: "0.5rem", padding: "0px", fontSize: "1.5rem", fontWeight: "600" }}> Rs. {state.items[0]?.price} </h6>
                                         </span>
 
-                                        <span className="user_name_and_status"> <Button color="success" onClick={() => dispatch(add_to_cart(state?.items[0]))}> <TfiShoppingCart size={30} /> </Button> </span>
+                                        <span className="user_name_and_status"> </span>
 
                                     </Button>
 
+
+
+                                    <Button color="success" onClick={() => dispatch(getUsersList())}> FETCH </Button>
 
                                 </Card>
 
@@ -323,9 +286,13 @@ const App = () => {
                                                 <h6 className="user_name_and_status max_lines1" style={{ margin: "0px", marginLeft: "0.5rem", padding: "0px", fontSize: "1.5rem", fontWeight: "600" }}> Rs. {v?.price} </h6>
                                             </span>
 
-                                            <span className="user_name_and_status"> <Button onClick={() => dispatch(add_to_cart(v))} color="success"> <TfiShoppingCart size={30} /> </Button> </span>
+                                            <span className="user_name_and_status">  </span>
+
 
                                         </Button>
+
+
+                                        <Button onClick={() => dispatch( getTodoList() )} color="success"> FETCH TODO</Button>
 
 
                                     </Card>

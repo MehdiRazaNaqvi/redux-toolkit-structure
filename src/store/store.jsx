@@ -5,10 +5,12 @@ import { persistReducer } from 'redux-persist';
 import thunk from 'redux-thunk';
 
 import counterReducer from './counterslice';
+import postReducer from './postSlice';
 
 
 const reducers = combineReducers({
     counter: counterReducer,
+    post: postReducer,
 
 });
 
